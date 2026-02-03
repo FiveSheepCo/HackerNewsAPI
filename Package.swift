@@ -17,12 +17,13 @@ let package = Package(
             targets: ["HackerNewsAPI"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Quintschaf/SchafKit.git", .branch("master"))
+        .package(url: "https://github.com/FiveSheepCo/AsyncNetworking.git", .branch("main")),
+        .package(url: "https://github.com/scinfu/SwiftSoup", .branch("master"))
     ],
     targets: [
         .target(
             name: "HackerNewsAPI",
-            dependencies: ["SchafKit"]),
+            dependencies: ["SwiftSoup", "AsyncNetworking"]),
         .testTarget(
             name: "HackerNewsAPITests",
             dependencies: ["HackerNewsAPI"]),

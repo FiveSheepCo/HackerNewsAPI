@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct HNItem: Codable, Equatable {
+public struct HNItem: Codable, Equatable, Identifiable {
     
     public enum Kind: String, Codable {
         case job, story, comment, poll, pollopt
